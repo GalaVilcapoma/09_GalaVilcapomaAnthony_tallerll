@@ -1,0 +1,14 @@
+<div class="container">
+  <h2> {{title}} </h2>
+  <div class="card" *ngFor="let post of postPaginados">
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.body }}</p>
+    <span class="id"> ID: {{ post.id }}</span>
+  </div>
+</div>
+
+<div class="paginacion">
+  <button (click)="paginaAnterior()"> Anterior </button>
+  <span> Pagina {{ paginActual }} </span>
+  <button (click)="paginaSiguiente()"> Siguiente </button>
+</div>
